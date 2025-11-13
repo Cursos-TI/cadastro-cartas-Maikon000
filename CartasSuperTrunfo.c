@@ -72,7 +72,7 @@ int main() {
     //sempre segindo essa ordem 
 
 
-    printf("Super Trunfo de Países\n\nNesse jogo você comparar duas cidades, o sistema vai pedir para você os dados de 2 cartas você vai colocar vai digitar os dados. começando pela carta 1.\n\nCarta 1\n\n");
+    printf("Super Trunfo\n\nNesse jogo você comparar duas cidades, o sistema vai pedir para você os dados referentes 2 cidades, você vai car vai digitar os dados de acordo com  que o sistema pedir segindo as suas indicações, pronto entendendo isso podemos seguir:\n\n");
 
     // "\n" Serve para pular linha. isso deixa o codigo maisorganizado e mais facil de ler.
 
@@ -101,22 +101,24 @@ int main() {
     // PIB: 699.28 bilhões de reais
     // Número de Pontos Turísticos: 50
 
+    printf("Vamos colocar os dados da carta 1:\n\n");
+
     printf("Digite uma letra de 'A' a 'H': \n"); // nesse caso podemos notar o uso do \n.
     scanf("%s", &Estado); // Nesse caso %s e o formato usado para pegar o dado digitado pelo usuario. &estado e o nome da variavel que vai armazenar o dado digitado peelo usuario.
     
     printf("Digite a letra do estado seguida de um número de 01 a 04, ex(A01, B02...): \n");
     scanf("%s", codigo);
 
-    printf("Digite O nome da cidade apenas um nome ou todas as palavras juntas: \n");
+    printf("Digite o nome da cidade apenas um nome ou todas as palavras juntas: \n");
     scanf("%s", nome_cidade); // Nesse caso podemos notar que não colocamos o & comercial pois foi usado  formaro %s.
 
-    printf("Digite O número de habitantes da cidade: \n");
+    printf("Digite o número de habitantes da cidade apenas numeros: \n");
     scanf("%d", &população);
 
-    printf("Digite A área da cidade em quilômetros quadrados(em km²): \n");
+    printf("Digite a área da cidade em quilômetros quadrados(em km²): \n");
     scanf("%f", &área);
 
-    printf("Digite O Produto Interno Bruto da cidade: \n");
+    printf("Digite o Produto Interno Bruto da cidade apenas os numeros: \n");
     scanf("%f", &pib);
 
     printf("Digite a quantidade de pontos turísticos da cidade: \n");
@@ -134,6 +136,8 @@ int main() {
     // Área: 1200.25 km²
     // PIB: 300.50 bilhões de reais
     // Número de Pontos Turísticos: 30
+
+    printf("Agora vamos para os dados das carta 2:\n\n");
     
     printf("Digite uma letra de 'A' a 'H': \n");
     scanf("%s", &Estado2);
@@ -141,19 +145,19 @@ int main() {
     printf("Digite a letra do estado seguida de um número de 01 a 04: \n");
     scanf("%s", codigo2);
 
-    printf("Digite O nome da cidade com apenas uma palavra ou todas as palavras juntas: \n");
+    printf("Digite o nome da cidade com apenas uma palavra ou todas as palavras juntas: \n");
     scanf("%s", nome_cidade2);
 
-    printf("Digite O número de habitantes da cidade: \n");
+    printf("Digite o número de habitantes da cidade apenas numeros: \n");
     scanf("%d", &população2);
 
-    printf("Digite A área da cidade em quilômetros quadrados(em km²): \n");
+    printf("Digite a área da cidade em quilômetros quadrados(em km²): \n");
     scanf("%f", &área2);
 
-    printf("Digite O Produto Interno Bruto da cidade apenas numeros: \n");
+    printf("Digite o Produto Interno Bruto da cidade apenas numeros apenas numeros: \n");
     scanf("%f", &pib2);
 
-    printf("Digite a quantidade de pontos turísticos da cidade: \n");
+    printf("Digite a quantidade de pontos turísticos da cidade: \n\n");
     scanf("%d", &númerodepontosturísticos2 );
 
     printf("\n");
@@ -164,7 +168,7 @@ int main() {
     // EXEMPLO: printf("Estado: %c \n", Estado);
     // Sempre seguindo essa ordem: printf(“%formato1 %formato2”, variável1, variável2);
 
-    printf("Carta 1 \n");
+    printf("CARTA 1 \n");
 
     printf("Estado: %c \n", Estado);
     printf("Código: %s \n", codigo);
@@ -176,7 +180,7 @@ int main() {
 
     printf("\n");
     
-    printf("Carta 2 \n");
+    printf("CARTA 2 \n");
 
     printf("Estado: %c \n", Estado2);
     printf("Código: %s \n", codigo2);
@@ -189,6 +193,7 @@ int main() {
     // Tudo estiver certo o sistema vai exibir os dados dgitados pelo o jogador.
 
     return 0; // indica que o programa terminou com sucesso.
+
 
 
 } 
