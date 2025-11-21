@@ -1,10 +1,6 @@
-#include <stdio.h>
+#include <stdio.h> // Serve para incluir a biblioteca padrão de entrada e saída, que permite usar funções como printf e scanf.
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
-int main() {
+int main (){
 
 //Nesse programa vamos começar definido as variaveis, 
 
@@ -27,12 +23,14 @@ int main() {
     // Variaveis da carta 1
 
     char Estado; // variavel que vai armazenar os dados do estado que será uma letra da cidade 1.
-    char codigo[3];  // variavel que vai armazenar os dados do codigo do cidade 1.
+    char codigo[4];  // variavel que vai armazenar os dados do codigo do cidade 1.
     char nome_cidade[20]; // variavel que vai armazenar os dados do nome da cidade 1.
     int população; // variavel que vai armazenar os dados da população 1.
-    double área; // variavel que vai armazenar os dados da area da cidade 1.
-    double pib; // variavel que vai armazenar os dados do PIB da cidade 1.
+    float área; // variavel que vai armazenar os dados da area da cidade 1.
+    float pib; // variavel que vai armazenar os dados do PIB da cidade 1.
     int númerodepontosturísticos; // variavel que vai armazenar os dados Números de pontos turisticos cidade 1.
+    float DensidadePopulacional;  // variavel que vai armazenar o calculo da Densidade Populacional da cidade 1.
+    float PIBperCapita;  // variavel que vai armazenar o calculo do PIB per Capita da cidade 1.
 
     //  Da para notar que na variavel "char" usamos o colchetes "[ ]" isso serve para indicar o tamanho da variavel,
     // nesse caso a variavel "codigo" tem o tamanho de 3 caracteres e a variavel "nome_cidade " tem o tamanho de 20 caracteres. 
@@ -40,12 +38,14 @@ int main() {
     // variaveis da carta 2
 
     char Estado2; // variavel que vai armazenar os dados do estado que será uma letra da cidade 2.
-    char codigo2[3]; // variavel que vai armazenar os dados do codigo da cidade 2.
+    char codigo2[4]; // variavel que vai armazenar os dados do codigo da cidade 2.
     char nome_cidade2[20]; // variavel que vai armazenar os dados do nome da cidade 2.
     int população2; // variavel que vai armazenar os dados da população 2.
     float área2; // variavel que vai armazenar os dados da area da cidade 2.
     float pib2; // variavel que vai armazenar os dados do PIB da cidade 2.
     int númerodepontosturísticos2; // variavel que vai armazenar os dados Números de pontos turisticos cidade 2.
+    float DensidadePopulacional2; // variavel que vai armazenar o calculo da Densidade Populacional da cidade 2.
+    float PIBperCapita2; // variavel que vai armazenar o calculo do PIB per Capita da cidade 2.
 
     //Depois de determinar as variaveis vamos para a parte de entrada e saída.
 
@@ -72,7 +72,7 @@ int main() {
     //sempre segindo essa ordem 
 
 
-    printf("Super Trunfo\n\nNesse jogo você comparar duas cidades, o sistema vai pedir para você os dados referentes 2 cidades, você vai car vai digitar os dados de acordo com  que o sistema pedir segindo as suas indicações, pronto entendendo isso podemos seguir:\n\n");
+    printf("Super Trunfo de Países\n\nNesse jogo você comparar duas cidades, o sistema vai pedir para você os dados de 2 cartas você vai colocar vai digitar os dados. começando pela carta 1.\n\nCarta 1\n\n");
 
     // "\n" Serve para pular linha. isso deixa o codigo maisorganizado e mais facil de ler.
 
@@ -101,24 +101,22 @@ int main() {
     // PIB: 699.28 bilhões de reais
     // Número de Pontos Turísticos: 50
 
-    printf("Vamos colocar os dados da carta 1:\n\n");
-
     printf("Digite uma letra de 'A' a 'H': \n"); // nesse caso podemos notar o uso do \n.
     scanf("%s", &Estado); // Nesse caso %s e o formato usado para pegar o dado digitado pelo usuario. &estado e o nome da variavel que vai armazenar o dado digitado peelo usuario.
     
     printf("Digite a letra do estado seguida de um número de 01 a 04, ex(A01, B02...): \n");
     scanf("%s", codigo);
 
-    printf("Digite o nome da cidade apenas um nome ou todas as palavras juntas: \n");
+    printf("Digite O nome da cidade apenas um nome ou todas as palavras juntas: \n");
     scanf("%s", nome_cidade); // Nesse caso podemos notar que não colocamos o & comercial pois foi usado  formaro %s.
 
-    printf("Digite o número de habitantes da cidade apenas numeros: \n");
+    printf("Digite O número de habitantes da cidade: \n");
     scanf("%d", &população);
 
-    printf("Digite a área da cidade em quilômetros quadrados(em km²): \n");
+    printf("Digite A área da cidade em quilômetros quadrados(em km²): \n");
     scanf("%f", &área);
 
-    printf("Digite o Produto Interno Bruto da cidade apenas os numeros: \n");
+    printf("Digite o Produto Interno Bruto PIB da cidade 1, coloque o numero em bilhões e apenas um ponto segindo o EXEMPLO; 699.28...: \n");
     scanf("%f", &pib);
 
     printf("Digite a quantidade de pontos turísticos da cidade: \n");
@@ -136,8 +134,6 @@ int main() {
     // Área: 1200.25 km²
     // PIB: 300.50 bilhões de reais
     // Número de Pontos Turísticos: 30
-
-    printf("Agora vamos para os dados das carta 2:\n\n");
     
     printf("Digite uma letra de 'A' a 'H': \n");
     scanf("%s", &Estado2);
@@ -145,22 +141,34 @@ int main() {
     printf("Digite a letra do estado seguida de um número de 01 a 04: \n");
     scanf("%s", codigo2);
 
-    printf("Digite o nome da cidade com apenas uma palavra ou todas as palavras juntas: \n");
+    printf("Digite O nome da cidade com apenas uma palavra ou todas as palavras juntas: \n");
     scanf("%s", nome_cidade2);
 
-    printf("Digite o número de habitantes da cidade apenas numeros: \n");
+    printf("Digite O número de habitantes da cidade: \n");
     scanf("%d", &população2);
 
-    printf("Digite a área da cidade em quilômetros quadrados(em km²): \n");
+    printf("Digite A área da cidade em quilômetros quadrados(em km²): \n");
     scanf("%f", &área2);
 
-    printf("Digite o Produto Interno Bruto da cidade apenas numeros apenas numeros: \n");
+    printf("Digite o Produto Interno Bruto PIB da cidade 2, coloque o numero em bilhões e apenas um ponto segindo o EXEMPLO; 699.28...: \n");
     scanf("%f", &pib2);
 
-    printf("Digite a quantidade de pontos turísticos da cidade: \n\n");
+    printf("Digite a quantidade de pontos turísticos da cidade: \n");
     scanf("%d", &númerodepontosturísticos2 );
 
     printf("\n");
+
+    // Calculo de Densidade Populacional e PIB per Capita
+    // nesse area abaixo estamos fazendo o calculo da Densidade Populacional e do PIB per Capita usando as formulas.
+    // Densidade Populacional = População / Área,  = / significa dividido.  
+    // PIB per Capita = PIB / População 
+    // Esses calculos são importantes para comparar as cidades de forma mais detalhada.
+
+     //DensidadePopulacional = (float) (população / área); // densidade populacional da cidade 1.
+     //PIBperCapita = (float) (pib / população);
+
+    // DensidadePopulacional2 = (float) (população / área); // densidade populacional dq cidade 2.
+     //PIBperCapita2 = (float) (pib / população);
 
     // Depois do sistema coletar os dados ele vão ser exibidos para o jogador. 
     // Nesse campo abaixo esta o codigo para isso acontece.
@@ -168,19 +176,21 @@ int main() {
     // EXEMPLO: printf("Estado: %c \n", Estado);
     // Sempre seguindo essa ordem: printf(“%formato1 %formato2”, variável1, variável2);
 
-    printf("CARTA 1 \n");
+    printf("Carta 1 \n");
 
     printf("Estado: %c \n", Estado);
     printf("Código: %s \n", codigo);
     printf("Nome da Cidade: %s \n", nome_cidade);
     printf("População: %d \n", população);
     printf("Área: %.2f km² \n", área);
-    printf("PIB: %.2fe bilhões de reais \n", pib);
+    printf("PIB: %.2f bilhões de reais \n", pib);
     printf("Número de Pontos Turísticos: %d \n", númerodepontosturísticos);
+    printf("Densidade Populacional: %.2f habitantes por km² \n", DensidadePopulacional = (float) (população / área));
+    printf("PIB per Capita: %.2f reais \n", PIBperCapita = (float) ((pib * 1000000000) / população)); 
 
     printf("\n");
     
-    printf("CARTA 2 \n");
+    printf("Carta 2 \n");
 
     printf("Estado: %c \n", Estado2);
     printf("Código: %s \n", codigo2);
@@ -189,11 +199,12 @@ int main() {
     printf("Área: %.2f km² \n", área2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", númerodepontosturísticos2);
+    printf("Densidade Populacional: %.2f habitantes por km² \n", DensidadePopulacional2 = (float) (população2 / área2));
+    printf("PIB per Capita: %.2f reais \n", PIBperCapita2 = (float) ((pib2 * 1000000000) / população2));
 
     // Tudo estiver certo o sistema vai exibir os dados dgitados pelo o jogador.
 
     return 0; // indica que o programa terminou com sucesso.
 
 
-
-} 
+}
